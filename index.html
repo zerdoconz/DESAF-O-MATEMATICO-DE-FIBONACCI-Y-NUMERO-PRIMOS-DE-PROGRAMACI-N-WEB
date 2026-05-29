@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Web: Fibonacci y Números Primos en el Mundo Real</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Desafío Web: Fibonacci y Números Primos en el Mundo Real</h1>
+        <p>Aplicaciones matemáticas avanzadas by: Danner Alejandro Ortiz Coro</p>
+    </header>
+
+    <main>
+        <!-- PROBLEMA 1: FIBONACCI -->
+        <section id="seccion-fibonacci" class="card">
+            <h2>1. Fibonacci en Ahorro Progresivo</h2>
+            <div class="explicacion">
+                <h3>📖 Explicación Extensa del Problema</h3>
+                <p>
+                    En el ámbito de las finanzas personales y la planificación de inversiones a largo plazo, la sucesión de Fibonacci se utiliza como modelo matemático para representar <strong>crecimiento progresivo no lineal</strong>. A diferencia del interés compuesto tradicional, donde el incremento es porcentual y constante, la progresión Fibonacci simula escenarios donde los aportes o rendimientos dependen directamente del historial reciente de acumulación ($F_n = F_{n-1} + F_{n-2}$). 
+                </p>
+                <p>
+                    En la vida real, esto se aplica en estrategias de ahorro escalonado para emprendedores o freelancers: cada mes se destina al capital una cantidad equivalente a la suma de los dos períodos anteriores, permitiendo una curva de crecimiento acelerada pero predecible. El algoritmo evita el uso de estructuras de datos pesadas (como arreglos) y opera mediante intercambio de variables simples, garantizando una complejidad espacial de $O(1)$ y un rendimiento óptimo incluso en dispositivos con recursos limitados.
+                </p>
+            </div>
+            <div class="interaccion">
+                <label for="input-meses">Períodos de ahorro (meses/semanas):</label>
+                <input type="number" id="input-meses" min="1" placeholder="Ej: 10">
+                <button id="btn-calc-fib">Calcular Progresión</button>
+                <p id="resultado-fib" class="resultado"></p>
+            </div>
+            <div class="codigo">
+                <h3>💻 Lógica en JavaScript</h3>
+                <pre><code id="code-fib"></code></pre>
+            </div>
+        </section>
+
+        <!-- PROBLEMA 2: PRIMOS -->
+        <section id="seccion-primos" class="card">
+            <h2>2. Números Primos en Códigos de Acceso</h2>
+            <div class="explicacion">
+                <h3>📖 Explicación Extensa del Problema</h3>
+                <p>
+                    Los números primos son la base fundamental de la criptografía moderna y los sistemas de seguridad biométrica. En entornos corporativos, militares o bancarios, los códigos de acceso de alta seguridad suelen generarse o validarse mediante propiedades aritméticas que son computacionalmente costosas de revertir. Un número primo, por definición, solo es divisible exactamente por sí mismo y por la unidad (1), lo que le otorga una "huella digital" matemática única.
+                </p>
+                <p>
+                    Este simulador valida si un número proporcionado cumple con la condición de primalidad mediante un recorrido cíclico completo. El sistema emplea la operación aritmético-módulo (`%`) para detectar residuos cero. Si el contador de divisores alcanza exactamente el valor 2 al finalizar el ciclo, la clave se declara como <strong>alta seguridad</strong> y supera los filtros de la interfaz. Este método, aunque básico, refleja el primer paso lógico en la generación de llaves RSA y en la validación de integridad de tokens de acceso.
+                </p>
+            </div>
+            <div class="interaccion">
+                <label for="input-numero">Número a validar como clave:</label>
+                <input type="number" id="input-numero" min="1" placeholder="Ej: 97">
+                <button id="btn-validar-primo">Validar Seguridad</button>
+                <p id="resultado-primo" class="resultado"></p>
+            </div>
+            <div class="codigo">
+                <h3>💻 Lógica en JavaScript</h3>
+                <pre><code id="code-primo"></code></pre>
+            </div>
+        </section>
+
+        <!-- PROBLEMA 3: COMBINADO -->
+        <section id="seccion-combinado" class="card">
+            <h2>3. Filtro Combinado (Bioinformática)</h2>
+            <div class="explicacion">
+                <h3>📖 Explicación Extensa del Problema</h3>
+                <p>
+                    En bioingeniería y el análisis de señales genéticas, los investigadores deben filtrar frecuencias armónicas estables de entre miles de datos ruidosos. La naturaleza suele operar bajo patrones matemáticos superpuestos: la sucesión de Fibonacci aparece en la distribución de hojas, ramificaciones y secuencias de ADN, mientras que los números primos modelan la periodicidad y los ciclos de mutación no repetitivos.
+                </p>
+                <p>
+                    Este problema une ambos mundos en una ejecución unificada. El sistema genera términos secuenciales de Fibonacci hasta un límite definido y, en tiempo de ejecución, cada resultado es interceptado por un validador de división exacta que audita si el número posee propiedades primas. El propósito práctico es simular el filtrado de eventos raros que cumplen con ambas condiciones matemáticas de manera simultánea. En un laboratorio real, esto equivaldría a identificar marcadores genéticos estables (Fibonacci) que además presenten patrones de mutación irreductibles (Primos), destacándolos visualmente para su posterior análisis clínico.
+                </p>
+            </div>
+            <div class="interaccion">
+                <label for="input-limite">Límite superior de la serie:</label>
+                <input type="number" id="input-limite" min="1" placeholder="Ej: 500">
+                <button id="btn-filtro-bio">Ejecutar Filtro Bioinformático</button>
+                <p id="resultado-combinado" class="resultado"></p>
+            </div>
+            <div class="codigo">
+                <h3>💻 Lógica en JavaScript</h3>
+                <pre><code id="code-combinado"></code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-principal">
+        <div class="footer-contenido">
+            <p>© <span id="anio-actual"></span> Desafío Web Matemático</p>
+            <nav class="footer-links">
+                <!-- 🔗 REEMPLAZA ESTOS ENLACES CON TUS URLS REALES -->
+                <a href="https://github.com/TU_USUARIO/TU_REPOSITORIO" target="_blank" rel="noopener noreferrer">📦 Repositorio en Git</a>
+                <a href="https://TU_USUARIO.github.io/TU_REPOSITORIO" target="_blank" rel="noopener noreferrer">🌐 Página Desplegada</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
